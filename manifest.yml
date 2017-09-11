@@ -1,0 +1,7 @@
+---
+applications:
+- name: scratchbot
+- buildpack: https://github.com/cloudfoundry/ruby-buildpack.git
+- no-route: true
+- timeout: 90
+- health-check-type: none
