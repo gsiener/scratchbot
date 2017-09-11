@@ -1,4 +1,4 @@
-require 'sinatra'
-require './app.rb'
+require 'slack-ruby-bot'
+require './scratchbot.rb'
 
-run Sinatra::Application
+ScratchBot.run
