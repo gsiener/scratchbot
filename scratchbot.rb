@@ -1,6 +1,7 @@
 require 'slack-ruby-bot'
 require 'google_drive'
 require './forecast.rb'
+require 'dotenv/load'
 
 SlackRubyBot::Client.logger.level = Logger::WARN
 
@@ -20,9 +21,7 @@ class ForecastService
   
   def initialize
     @session ||= GoogleDrive::Session.from_config("config.json")
-    @payload ||= @session.spreadsheet_by_url(
-      "https://docs.google.com/spreadsheets/d/1wlMSFn0qxtwYjm7P4nMVSHh5fadhxLfo4gHVnkk9WUg/edit#gid=441509683"
-    )
+    @payload ||= @session.spreadsheet_by_url(ENV['FORECAST_URL'])
     @forecast ||= Forecast.new(@payload)
   end
   
