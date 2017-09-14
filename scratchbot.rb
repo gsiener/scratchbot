@@ -6,6 +6,14 @@ require 'dotenv/load'
 SlackRubyBot::Client.logger.level = Logger::WARN
 
 class ScratchBot < SlackRubyBot::Bot
+  help do
+    title 'Scratch'
+    desc 'shares current field forecast'
+    command 'forecast' do
+      long_desc 'shows, in Millions, the field commit in PCF Annual Contract Value for the current quarter'
+    end
+  end
+
   command 'hi' do |client, data, match|
     client.say(text: 'meow', channel: data.channel)
   end
