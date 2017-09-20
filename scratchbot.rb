@@ -23,16 +23,24 @@ class ScratchBot < SlackRubyBot::Bot
     client.say(text: f, channel: data.channel)
   end
 
+  command 'top' do |client, data, match|
+    f = ForecastService.new
+    client.say(text: f.top, channel: data.channel)
+  end
+
 end
 
 class ForecastService
-  
   def initialize
     @session ||= GoogleDrive::Session.from_config("config.json")
     @payload ||= @session.spreadsheet_by_url(ENV['FORECAST_URL'])
     @forecast ||= Forecast.new(@payload)
   end
-  
+
+  def top
+    @forecast.top_twenty
+  end
+
   def to_s
     @forecast.to_s
   end
