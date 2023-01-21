@@ -1,12 +1,11 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (6.1.0)
+    activesupport (7.0.4.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
-      zeitwerk (~> 2.3)
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     celluloid (0.18.0)
@@ -15,7 +14,7 @@ GEM
       celluloid (>= 0.17.2)
       nio4r (>= 1.1)
       timers (>= 4.1.1)
-    concurrent-ruby (1.1.7)
+    concurrent-ruby (1.1.10)
     declarative (0.0.20)
     declarative-option (0.1.0)
     dotenv (2.7.6)
@@ -47,14 +46,14 @@ GEM
       signet (~> 0.14)
     hashie (4.1.0)
     httpclient (2.8.3)
-    i18n (1.8.5)
+    i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     json (2.5.1)
     jwt (2.2.2)
     memoist (0.16.2)
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
-    minitest (5.14.2)
+    minitest (5.17.0)
     multi_json (1.15.0)
     multipart-post (2.1.1)
     mustermann (1.1.1)
@@ -96,13 +95,12 @@ GEM
       websocket-driver
     tilt (2.0.10)
     timers (4.3.2)
-    tzinfo (2.0.4)
+    tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     uber (0.1.0)
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    zeitwerk (2.4.2)
 
 PLATFORMS
   ruby
